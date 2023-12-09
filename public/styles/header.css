@@ -1,0 +1,26 @@
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 400px;
+}
+
+.user-name {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+h2 {
+  color: white;
+  margin-top: 0;
+}
+
+
+header {
+  background-color: rgb(236, 203, 121);
+  background-color: #dcbf60;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+}
+
