@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  padding: 1.5em;
+  width: 100%;
+  background-color: #4056A1;
+  height: 120px;
+  
+}
+
+
+.write-tweet {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-family: 'Source Sans 3', sans-serif; /* Set font-family for <span> within <nav> */
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 1.5em;
+  gap: 10px;
+}
+
