@@ -37,11 +37,18 @@
   margin-bottom: 2em;
 }
 
+.all-tweets {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+}
+
 .tweet-article {
   border: 3px solid #45474B;
-  height: auto;
-
+  margin-top: 0.5em;
 }
+
 
 .tweet-header {
   display: flex;
