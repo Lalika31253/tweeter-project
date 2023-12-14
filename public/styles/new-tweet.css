@@ -9,6 +9,7 @@
  padding: 0;
  resize: none;
  outline: 0;
+ background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
 }
 
 .new-tweet {
@@ -33,4 +34,54 @@
   justify-content: space-between;
   font-family: 'Bungee', sans-serif;
   margin-top: 0.5em;
+  margin-bottom: 2em;
 }
+
+.tweet-article {
+  border: 3px solid #45474B;
+  height: auto;
+
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em;
+  background-color: #f4f1ec;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+}
+
+.tweet-header i {
+  line-height: 1.5em;
+}
+
+.tweet-content {
+  margin: 0 0.5em;
+}
+
+.tweet-footer {
+  display: flex;  
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 1em;
+}
+
+i {
+  color: #4056A1;
+  line-height: 1.5em;
+}
+
+
+.tweet-footer div {
+  margin-top: 1.5em;
+}
+
+i:hover {
+  color: #f5c959;;
+  }
+
+.tweet-article:hover {
+  box-shadow: 5px 5px 10px rgba(13, 13, 13, 0.3);
+}  
+

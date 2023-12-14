@@ -21,6 +21,7 @@ body {
   font-family: 'Source Sans 3', sans-serif;
   width: 100%;
   height: 100vh;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
 }
 
 .container {
