@@ -58,6 +58,7 @@ justify-content: space-between;
 
 .user-handle {
   margin: 1.5em;
+  color: rgb(104, 173, 196);
 }
 
 .tweet-header {
@@ -114,8 +115,14 @@ i {
 }
 
 i:hover {
-  color: #f5c959;;
-  }
+  color: #f5c959;
+}
+
+.tweet-btn:hover {
+  cursor: pointer;
+  transition: 0.4s ease;
+  color: rgb(140, 140, 161);
+}  
 
 .tweet-article:hover {
   box-shadow: 5px 5px 10px rgba(13, 13, 13, 0.3);

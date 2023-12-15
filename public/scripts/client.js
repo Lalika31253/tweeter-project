@@ -79,7 +79,7 @@ $(document).ready(function () {
       // calls createTweetElement for each tweet
       const newTweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $section.append(newTweet);
+      $section.prepend(newTweet);
       // $section.append($tweet);
     };
   };
@@ -106,7 +106,6 @@ $(document).ready(function () {
     };
 
 
-
     //send POST request
     $.ajax({
       method: 'POST',
@@ -118,11 +117,11 @@ $(document).ready(function () {
       //   loadTweets();
     }).then(() => {
       $('#tweet-text').val('');
+      $('#counter').val('140');
       loadTweets();
     }).catch((error) => {
       console.log(error);
     });
-
   });
 
   const loadTweets = function () {
