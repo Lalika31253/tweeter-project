@@ -47,10 +47,9 @@ $(document).ready(function () {
      </div>
     
     <div class="user-handle">${data.user.handle}</div></div>
-    
 
     <div class="tweet-content">
-      <p class="text-content">${data.content.text}</p>
+      <p class="text-content for="all-tweets">${$('<div>').text(data.content.text).html()}</p>
     </div>
 
     <div class="tweet-footer">
