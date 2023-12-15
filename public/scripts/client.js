@@ -37,28 +37,31 @@ $(document).ready(function () {
   const createTweetElement = function (data) {
 
     const $tweet = $(`
-  <div class="tweet-article">
+    <div class="tweet-article">
+    
+    <div class="upper-row">
 
-      <div class="tweet-header">
-        <i class="fa-solid fa-user-nurse fa-xl"></i>
-        <p>${data.user.name}</p>
+     <div class="tweet-header">
+       <i class="fa-solid fa-user-nurse fa-xl"></i>
+       <p>${data.user.name}</p>
+     </div>
+    
+    <div class="user-handle">${data.user.handle}</div></div>
+    
+
+    <div class="tweet-content">
+      <p class="text-content">${data.content.text}</p>
+    </div>
+
+    <div class="tweet-footer">
+      <h6>${timeago.format(data.created_at)}</h6>
+    <div>
+      <i class="fa-solid fa-flag fa-sm"></i>
+      <i class="fa-solid fa-retweet"></i>
+      <i class="fa-solid fa-heart fa-sm"></i>
+    </div>
+
       </div>
-
-      <div class="tweet-content">
-        <h3>${data.content.text}</h3>
-        <textarea name="text" id="tweet-text"></textarea>
-      </div>
-
-      <div class="tweet-footer">
-        <h6>${timeago.format(data.created_at)}</h6>
-        <div>
-          <i class="fa-solid fa-flag fa-sm"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart fa-sm"></i>
-        </div>
-
-      </div>
-
     </div>
     `);
 
@@ -84,18 +87,25 @@ $(document).ready(function () {
 
   // grab a form
   const $form = $('#new-tweet-item');
+
   //listen for the submit event
   $form.on('submit', function (event) {
     //prevent the default behaviour
     event.preventDefault();
-    console.log("The form has submitted");
 
-    //grab the data from the form
-    //create urlencoded string
+    //grab the data from the form and create urlencoded string
     const $formData = $(this).serialize();
-    console.log($formData);
     //get tweet value
     const $tweetText = $('#tweet-text').val();
+
+    //check for user input
+    if ($tweetText === null || $tweetText === "") {
+      alert("You can not post an empty rweet!");
+    } else if ($tweetText.length > 140) {
+      alert("Your tweet is to big! The text size should't exceed 140 characters");
+    };
+
+
 
     //send POST request
     $.ajax({
@@ -112,7 +122,6 @@ $(document).ready(function () {
     }).catch((error) => {
       console.log(error);
     });
-
 
   });
 
