@@ -50,7 +50,7 @@ $(document).ready(function () {
       </div>
 
       <div class="tweet-footer">
-        <h6>${data.created_at}</h6>
+        <h6>${timeago.format(data.created_at)}</h6>
         <div>
           <i class="fa-solid fa-flag fa-sm"></i>
           <i class="fa-solid fa-retweet"></i>
