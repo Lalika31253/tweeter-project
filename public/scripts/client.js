@@ -83,6 +83,13 @@ $(document).ready(function () {
     };
   };
 
+  //hendle error mesage
+  setTimeout(() => {
+    $('.error-message').fadeOut('slow');
+  }, 2000);
+
+  $('.error-message').empty();
+
 
   // grab a form
   const $form = $('#new-tweet-item');
@@ -99,34 +106,36 @@ $(document).ready(function () {
 
     //check for user input
     if ($tweetText === null || $tweetText === "") {
-      alert("You can not post an empty rweet!");
+      // alert("You can not post an empty tweet!");
+      $(".error-message").append('<i class="fa-solid fa-triangle-exclamation error-message"></i> You can not post an empty tweet! <i class="fa-solid fa-triangle-exclamation error-message"></i>').slideDown();
     } else if ($tweetText.length > 140) {
-      alert("Your tweet is to big! The text size should't exceed 140 characters");
-    };
-
-
-    //send POST request
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: $formData,
-      // succss: () => {
-      //   console.log("Post request resolved successfully");
-      //   //make a GET request to retrieve all tweet items
-      //   loadTweets();
-    }).then(() => {
-      $('#tweet-text').val('');
-      $('#counter').val('140');
-      loadTweets();
-    }).catch((error) => {
-      console.log(error);
-    });
+      // alert("Your tweet is to big! The text size should't exceed 140 characters");
+      $(".error-message").append('<i class="fa-solid fa-triangle-exclamation error-message"></i> Your tweet is to big! The text size should not exceed 140 characters! <i class="fa-solid fa-triangle-exclamation error-message"></i>').slideDown();
+    } else {
+      //send POST request
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: $formData,
+        // succss: () => {
+        //   console.log("Post request resolved successfully");
+        //   //make a GET request to retrieve all tweet items
+        //   loadTweets();
+      }).then(() => {
+        $('#tweet-text').val('');
+        $('#counter').val('140');
+        loadTweets();
+      }).catch((error) => {
+        console.log(error);
+      });
+    }
   });
 
   const loadTweets = function () {
     $.ajax({
       url: '/tweets',
       method: 'GET',
+      dataType: 'json',
       success: (tweets) => {
         console.log(tweets);
         renderTweets(tweets);
