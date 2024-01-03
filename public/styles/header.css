@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  height: 400px;
+  height: 350px;
+  flex: auto;
 }
 
 .user-name {
@@ -17,10 +18,12 @@ h2 {
   margin-top: 0;
 }
 
-
 header {
-  background-color: rgb(235, 183, 51);
-  background-color: #f1c659;
+  display: flex;
+  height: 500px;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0b111;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
 }
-

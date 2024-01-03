@@ -1,0 +1,36 @@
+@media screen and (min-width: 789px) {
+  
+  header {
+    width: 750px;
+    height: 450px;
+    margin-top: 7em;
+    margin-left: 1em;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: row;
+  } 
+  
+  .container {
+    padding-top: 5.5em;
+  }
+  
+  .image {
+    align-items: center;
+  }
+  
+  .tweet-footer {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  
+  .upper-row {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+
+  nav {
+    background-color: #4056A1;
+  }
+
+}

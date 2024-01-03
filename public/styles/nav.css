@@ -6,12 +6,12 @@ nav {
   color: #FFFFFF;
   padding: 1.5em;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #f0b111;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
   height: 120px;
   position: fixed;
   
 }
-
 
 .write-tweet {
   display: flex;
@@ -20,7 +20,12 @@ nav {
   font-family: 'Source Sans 3', sans-serif; /* Set font-family for <span> within <nav> */
   align-items: center;
   justify-content: space-around;
-  padding-right: 1.5em;
   gap: 10px;
 }
+
+.write-tweet i {
+  animation: bounce 1s infinite;
+  color: #e74427;
+}
+
 

@@ -1,26 +1,40 @@
 #tweet-text {
- display: flex;
- border: 0;
- border-bottom: 3px solid #45474B;
- background: transparent;
- background-color: #f4f1ec;
- width: 800px;
- height: auto;
- padding: 0;
- margin-top: 0.5em;
- resize: none;
- outline: 0;
- word-wrap: break-word;
- background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border: 0;
+  border-bottom: 3px solid #45474B;
+  background: transparent;
+  background-color: #f4f1ec;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin-top: 0.5em;
+  resize: none;
+  outline: 0;
+  word-wrap: break-word;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+}
+
+#new-tweet-item {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  padding-top: 1em; 
 }
 
 .new-tweet {
- display: flex;
+  display: flex;
+  flex-wrap: wrap;
   border: 0;
   outline: 0;
   resize: none;
   height: auto;
   font-weight: bolder;
+  align-content: center;
+  align-items: center;
+  width: 90%;
+  flex-direction: column-reverse;
 }
 
 .tweet-btn {
@@ -41,19 +55,36 @@
 
 .all-tweets {
   display: flex;
+  flex-shrink: inherit;
   flex-direction: column;
   height: auto;
+  width: 80%;
   justify-content: center;
 }
 
 .tweet-article {
+  display: flex;
+  flex-direction: column;
   border: 3px solid #45474B;
   margin-top: 0.5em;
+  width: 100%;
+  justify-content: center;
+  text-wrap: wrap;
+  align-items: center;
+}
+
+.tweet-footer {
+  display: flex;  
+  align-self: stretch;
+  justify-content: space-between;
+  margin: 0 1em;
 }
 
 .upper-row{
-display: flex;
-justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center; 
 }
 
 .user-handle {
@@ -64,6 +95,7 @@ justify-content: space-between;
 .tweet-header {
   display: flex;
   flex-direction: row;
+  width: auto;
   margin: 1em;
   background-color: #f4f1ec;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
@@ -73,15 +105,18 @@ justify-content: space-between;
   line-height: 1.5em;
 }
 
+.tweet-header p {
+  padding-left: 0.5em;
+}
+
 .tweet-content {
   margin: 0 0.5em;
-  word-wrap: break-word;
   display: flex;
   border: 0;
   border-bottom: 3px solid #45474B;
   background: transparent;
   background-color: #f4f1ec;
-  width: 800px;
+  width: 85%;
   height: auto;
   padding: 0;
   margin-top: 0.5em;
@@ -93,26 +128,20 @@ justify-content: space-between;
 
 .text-content{
   word-wrap: break-word;
-  width: 100%;
+  width: 100%;  
 }
 
 .error-message {
   display: flex;
   justify-content: center;
   color: red;
-  height: fit-content;
+  padding-top: 0.5em;
   padding-bottom: 1em;
+  margin-left: 2em;
 }
 
 
-.tweet-footer {
-  display: flex;  
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 1em;
-}
-
-i {
+.tweet-footer i {
   color: #4056A1;
   line-height: 1.5em;
   padding-right: 0.3em;
@@ -123,7 +152,7 @@ i {
   margin-top: 1.5em;
 }
 
-i:hover {
+.tweet-footer i:hover {
   color: #f5c959;
 }
 
